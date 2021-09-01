@@ -10,7 +10,7 @@ Include the [dependency from Maven Central](https://search.maven.org/artifact/co
 <dependency>
 	<groupId>com.lt-peacock</groupId>
 	<artifactId>spring-recaptcha-verification</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 </dependency>
 ```
 
