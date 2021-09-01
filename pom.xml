@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.lt-peacock</groupId>
 	<artifactId>spring-recaptcha-verification</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Spring reCAPTCHA Verification</name>
 	<description>Library for verifying reCAPTCHA responses in Spring projects.</description>
 	<url>http://spring-recaptcha-verification.lt-peacock.com</url>
@@ -24,7 +24,7 @@
 		<connection>scm:git:git://github.com/LieutenantPeacock/spring-recaptcha-verification.git</connection>
 		<developerConnection>scm:git:file://d:/LocRepo/spring-recaptcha-verification.git</developerConnection>
 		<url>https://github.com/LieutenantPeacock/spring-recaptcha-verification</url>
-		<tag>v1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
 		<snapshotRepository>
