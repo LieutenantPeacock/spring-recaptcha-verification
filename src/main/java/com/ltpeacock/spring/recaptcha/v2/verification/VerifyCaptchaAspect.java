@@ -35,7 +35,7 @@ public class VerifyCaptchaAspect {
 			return joinPoint.proceed();
 		} else {
 			final FlashMap flashMap = RequestContextUtils.getOutputFlashMap(request);
-			flashMap.put("captchaVerificationError", true);
+			flashMap.put(verifyCaptcha.errorAttribute(), true);
 			final String errorRedirectURL = verifyCaptcha.errorRedirectURL();
 			final String actualRedirectURL = errorRedirectURL == null || VerifyCaptcha.DEFAULT_ERROR_REDIRECT_URL.equals(errorRedirectURL)
 					? ServletUriComponentsBuilder.fromCurrentRequestUri().toUriString() : errorRedirectURL;

@@ -57,7 +57,7 @@ public class MyController {
 }
 ```
 
-The `@VerifyCaptcha` annotation can also be used on a controller method to indicate that the reCAPTCHA response should be verified before calling the method. Specify the `errorRedirectURL` attribute to set the URL to redirect to if the token is not valid (i.e. verification fails). By default, it will redirect back to the same page. Additionally, when verification fails, the `captchaVerificationError` attribute in the model will be set to `true`. Check this attribute to display an appropriate error message.
+The `@VerifyCaptcha` annotation can also be used on a controller method to indicate that the reCAPTCHA response should be verified before calling the method. Specify the `errorRedirectURL` attribute to set the URL to redirect to if the token is not valid (i.e. verification fails). By default, it will redirect back to the same page. Additionally, when verification fails, the value of the specified `errorAttribute` will be set to `true` in the model (`"captchaVerificationError"` if not set). Check this attribute to display an appropriate error message. 
 
 ```java
 @Controller

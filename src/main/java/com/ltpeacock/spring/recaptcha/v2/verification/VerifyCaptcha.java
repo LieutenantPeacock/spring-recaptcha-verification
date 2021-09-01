@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * Indicates that a controller method contains a Captcha parameter that should be verified before proceeding.
  * <br>
  * If verification fails, a redirect will be sent back to {@link VerifyCaptcha#errorRedirectURL()} and the model
- * will have the attribute {@code captchaVerificationError} set to {@code true}.
+ * will have the attribute {@link VerifyCaptcha#errorAttribute()} set to {@code true}.
  * 
  * If {@code errorRedirectURL} is not specified, then a redirect will be sent back to the same page.
  * 
@@ -28,8 +28,13 @@ public @interface VerifyCaptcha {
 	 * to the original request URL when Captcha verification fails.
 	 */
 	String DEFAULT_ERROR_REDIRECT_URL = "<>";
+	String DEFAULT_ERROR_ATTRIBUTE = "captchaVerificationError";
 	/**
 	 * The URL to redirect to when Captcha verification fails. 
 	 */
 	String errorRedirectURL() default DEFAULT_ERROR_REDIRECT_URL;
+	/**
+	 * The attribute to set to {@code true} in the model when verification fails.
+	 */
+	String errorAttribute() default DEFAULT_ERROR_ATTRIBUTE;
 }
