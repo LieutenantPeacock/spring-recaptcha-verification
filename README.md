@@ -4,7 +4,7 @@ Simple library for verifying reCAPTCHA v2 responses in Spring projects.
 ## Installation
 (JDK 8 is required at a minimum.)
 
-Include the dependency from Maven Central. For Maven users, add the following to pom.xml:
+Include the [dependency from Maven Central](https://search.maven.org/artifact/com.lt-peacock/spring-recaptcha-verification). For Maven users, add the following to pom.xml:
 
 ```xml
 <dependency>
