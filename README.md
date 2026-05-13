@@ -4,13 +4,13 @@ Simple library for verifying reCAPTCHA v2 responses in Spring projects.
 ## Installation
 (JDK 8 is required at a minimum.)
 
-Include the [dependency from Maven Central](https://search.maven.org/artifact/com.lt-peacock/spring-recaptcha-verification). For Maven users, add the following to pom.xml:
+Include the [dependency from Maven Central](https://central.sonatype.com/artifact/com.lt-peacock/spring-recaptcha-verification). For Maven users, add the following to pom.xml:
 
 ```xml
 <dependency>
 	<groupId>com.lt-peacock</groupId>
 	<artifactId>spring-recaptcha-verification</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 </dependency>
 ```
 
@@ -47,8 +47,8 @@ public class MyController {
 	private VerifyCaptchaService verifyCaptchaService;
 
 	@PostMapping("/")
-	public String test(HttpServletRequest request){
-		if(verifyCaptchaService.verifyCaptcha(request)){
+	public String test(HttpServletRequest request) {
+		if (verifyCaptchaService.verifyCaptcha(request)) {
 			// proceed normally
 		} else {
 			// show error
@@ -64,7 +64,7 @@ The `@VerifyCaptcha` annotation can also be used on a controller method to indic
 public class MyController {
 	@PostMapping("/")
 	@VerifyCaptcha(errorRedirectURL = "/captchaFailed")
-	public String test(){
+	public String test() {
 		// if this is reached, reCAPTCHA verification passed
 	}
 }
